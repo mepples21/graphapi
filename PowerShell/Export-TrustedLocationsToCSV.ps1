@@ -12,6 +12,7 @@ foreach ($location in $namedLocationObjects)
 
     $data = @{
 
+        countries = $location.AdditionalProperties.countriesAndRegions -join '; '
         ranges = $location.AdditionalProperties.ipRanges.cidrAddress -join '; '
         isTrusted = $location.AdditionalProperties.isTrusted
         displayName = $location.DisplayName
